@@ -1,7 +1,8 @@
 data "google_client_config" "default" {
 }
 
-data "google_container_cluster" "my_cluster" { 
+data "google_container_cluster" "my_cluster" {
+  name = "test"
 }
 
 resource "helm_release" "nginx" {
