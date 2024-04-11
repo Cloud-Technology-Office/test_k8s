@@ -1,3 +1,9 @@
+data "google_client_config" "default" {
+}
+
+data "google_container_cluster" "my_cluster" { 
+}
+
 resource "helm_release" "nginx" {
   name        = "beta-nginx"
   repository  = "https://kubernetes.github.io/ingress-nginx"
